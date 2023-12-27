@@ -1,4 +1,5 @@
 import tkinter as tk
+from components import updater
 
 # Function to handle menu item clicks
 def on_menu_click(menu_category, menu_item):
