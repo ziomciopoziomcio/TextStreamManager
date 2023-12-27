@@ -13,11 +13,13 @@ menu_items = [
         ("New", "Ctrl+N"),
         ("Edit", "Ctrl+E"),
         ("Save", "Ctrl+S"),
-        ("Save-all", "Alt+F4")
+        ("Delete", "Ctrl+Q")
     ]),
     ("Templates", [
-        ("Save", "Ctrl+X"),
-        ("Load", "Ctrl+C"),
+        ("Save", "Ctrl+T"),
+        ("Save to file", "Ctrl+Y"),
+        ("Load from file", "Ctrl+F"),
+        ("Load from database", "Ctrl+D")
     ]),
     ("Help", [
         ("About", None),
