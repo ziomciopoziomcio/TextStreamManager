@@ -1,13 +1,17 @@
-# import dependencies
 import tkinter as tk
+
+# Function to handle menu item clicks
+def on_menu_click(menu_category, menu_item):
+    menu_item_id = menu_item_data.get((menu_category, menu_item), "Unknown ID")
 
 # Create the menu window
 main = tk.Tk()
 main.title("TextStreamManager")
 
-
-# Create a menu
+# Create a Menu widget
 menu = tk.Menu(main)
+
+# Define the menu items
 menu_items = [
     ("Text", [
         ("New", "Ctrl+N"),
@@ -27,12 +31,18 @@ menu_items = [
     ])
 ]
 
+# Create a dictionary to store menu item IDs
+menu_item_data = {}
 for i, (menu_label, items) in enumerate(menu_items):
     submenu = tk.Menu(menu, tearoff=0)
     for j, (item_label, shortcut) in enumerate(items):
-        submenu.add_command(label=item_label, accelerator=shortcut)
+        submenu.add_command(label=item_label, accelerator=shortcut, command=lambda item=item_label, category=menu_label: on_menu_click(category, item))
+        menu_item_data[(menu_label, item_label)] = f"{menu_label}_{item_label}"
     menu.add_cascade(label=menu_label, menu=submenu)
     main.grid_columnconfigure(i, weight=1)
-# Start the app
+
+# Attach the menu to the main window
 main.config(menu=menu)
+
+# Start the app
 main.mainloop()
