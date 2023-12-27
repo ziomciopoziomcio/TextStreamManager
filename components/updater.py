@@ -22,6 +22,8 @@ def new_version(current, new):
     label = tk.Label(updater, text="You are currently running old version!")
     label.pack(pady=10)
     updater.mainloop()
+
+
 # Notification when user uses the newest version
 def uptodate(current):
     updater = tk.Tk()
