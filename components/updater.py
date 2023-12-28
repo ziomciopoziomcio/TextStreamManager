@@ -54,6 +54,9 @@ def error(name):
     updater.title("Error")
     label = tk.Label(updater, text="We cannot download the latest version.\nCheck your internet connection")
     label.pack(pady=10)
+    link = ttk.Label(updater, text="You can also try to see releases\nJust click here", cursor="hand2", foreground="blue")
+    link.pack(pady=2)
+    link.bind("<Button-1>", lambda e: update_link())
     updater.mainloop()
 
 
@@ -70,6 +73,6 @@ def update_controller(name):
 
 # Test function
 # if __name__ == '__main__':
-#     main = tk.Tk()
-#     update_controller(main)
-#     main.mainloop()
+    # main = tk.Tk()
+    # error(main)
+    # main.mainloop()
