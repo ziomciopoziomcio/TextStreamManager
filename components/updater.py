@@ -1,10 +1,15 @@
 import requests
 import tkinter as tk
+from tkinter import ttk
+import webbrowser
 
 
 # ANNOTATION:
 # Value "name" in all tkinter functions
 # navigate to the name of master window
+
+def update_link():
+    webbrowser.open("https://github.com/ziomciopoziomcio/TextStreamManager/releases")
 
 # Function to download name of latest version
 def version_download():
@@ -23,8 +28,11 @@ def version_download():
 def new_version(name, current, new):
     updater = tk.Toplevel(name)
     updater.title("New version available")
-    label = tk.Label(updater, text="You are currently running old version!")
-    label.pack(pady=10)
+    label = tk.Label(updater, text=f"You are currently running old version:\n{current}\nThe latest version:\n{new}")
+    label.pack(pady=2)
+    link = ttk.Label(updater, text="Click here to see releases", cursor="hand2", foreground="blue")
+    link.pack(pady=2)
+    link.bind("<Button-1>", lambda e: update_link())
     updater.mainloop()
 
 
@@ -32,7 +40,7 @@ def new_version(name, current, new):
 def uptodate(name, current):
     updater = tk.Toplevel(name)
     updater.title("Up to date")
-    label = tk.Label(updater, text=f"You are currently running the latest version: {current}")
+    label = tk.Label(updater, text=f"You are currently running the latest version:\n{current}")
     label.pack(pady=10)
     updater.mainloop()
 
@@ -50,5 +58,5 @@ def error(name):
 # Test function
 if __name__ == '__main__':
     main = tk.Tk()
-    error(main)
+    new_version(main, "1.0.0", "1.0.1")
     main.mainloop()
