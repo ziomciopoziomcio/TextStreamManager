@@ -2,6 +2,10 @@ import requests
 import tkinter as tk
 
 
+# ANNOTATION:
+# Value "name" in all tkinter functions
+# navigate to the name of master window
+
 # Function to download name of latest version
 def version_download():
     try:
@@ -16,8 +20,8 @@ def version_download():
 
 
 # Notification when update is available
-def new_version(current, new):
-    updater = tk.Tk()
+def new_version(name, current, new):
+    updater = tk.Toplevel(name)
     updater.title("New version available")
     label = tk.Label(updater, text="You are currently running old version!")
     label.pack(pady=10)
@@ -25,8 +29,8 @@ def new_version(current, new):
 
 
 # Notification when user uses the newest version
-def uptodate(current):
-    updater = tk.Tk()
+def uptodate(name, current):
+    updater = tk.Toplevel(name)
     updater.title("Up to date")
     label = tk.Label(updater, text=f"You are currently running the latest version: {current}")
     label.pack(pady=10)
@@ -34,11 +38,17 @@ def uptodate(current):
 
 
 # Notification when data is unavailable
-def error():
-    updater = tk.Tk()
+def error(name):
+    updater = tk.Toplevel(name)
     updater.title("Error")
     label = tk.Label(updater, text="We cannot download the latest version.\nCheck your internet connection")
     label.pack(pady=10)
     updater.mainloop()
 # # Brain of update system
 # def update_controller():
+
+# Test function
+if __name__ == '__main__':
+    main = tk.Tk()
+    error(main)
+    main.mainloop()
