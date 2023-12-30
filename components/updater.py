@@ -31,7 +31,8 @@ def version_download():
 def new_version(name, current, new):
     updater = tk.Toplevel(name)
     updater.title("New version available")
-    label = tk.Label(updater, text=f"You are currently running old version:\n{current}\nThe latest version:\n{new}")
+    text=f"You are currently running old version:\n{current}\nThe latest version:\n{new}"
+    label = tk.Label(updater, text=text)
     label.pack(pady=2)
     link = ttk.Label(updater, text="Click here to see releases", cursor="hand2", foreground="blue")
     link.pack(pady=2)
