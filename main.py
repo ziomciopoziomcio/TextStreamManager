@@ -1,5 +1,5 @@
 import tkinter as tk
-from components import updater
+from components import updater, about
 
 # Function to handle menu item clicks
 def on_menu_click(menu_category, menu_item):
@@ -21,7 +21,7 @@ def on_menu_click(menu_category, menu_item):
     elif menu_item_id == "Templates_Load from database":
         pass
     elif menu_item_id == "Help_About":
-        pass
+        about.about(main)
     elif menu_item_id == "Help_Check for updates":
         updater.update_controller(main)
 
