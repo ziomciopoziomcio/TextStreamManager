@@ -26,6 +26,7 @@ def on_menu_click(menu_category, menu_item):
     elif menu_item_id == "Help_Check for updates":
         updater.update_controller(main)
 
+
 # Check is config file exist
 # config_path = IN_BUILD
 
