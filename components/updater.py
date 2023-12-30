@@ -31,7 +31,7 @@ def version_download():
 def new_version(name, current, new):
     updater = tk.Toplevel(name)
     updater.title("New version available")
-    text=f"You are currently running old version:\n{current}\nThe latest version:\n{new}"
+    text = f"You are currently running old version:\n{current}\nThe latest version:\n{new}"
     label = tk.Label(updater, text=text)
     label.pack(pady=2)
     link = ttk.Label(updater, text="Click here to see releases", cursor="hand2", foreground="blue")
@@ -56,7 +56,8 @@ def error(name):
     text = "We cannot download the latest version.\nCheck your internet connection"
     label = tk.Label(updater, text=text)
     label.pack(pady=10)
-    link = ttk.Label(updater, text="You can also try to see releases\nJust click here", cursor="hand2", foreground="blue")
+    text = "You can also try to see releases\nJust click here"
+    link = ttk.Label(updater, text=text, cursor="hand2", foreground="blue")
     link.pack(pady=2)
     link.bind("<Button-1>", lambda e: update_link())
     updater.mainloop()
