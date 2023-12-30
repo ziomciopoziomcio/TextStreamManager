@@ -1,6 +1,6 @@
-import requests
 import tkinter as tk
 from tkinter import ttk
+import requests
 import webbrowser
 
 # ANNOTATION:
