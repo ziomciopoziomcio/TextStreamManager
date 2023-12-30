@@ -24,6 +24,7 @@ def version_reader(path):
     else:
         raise KeyError(1)
 
+# Function to read amount of text lines from
 # Test function
 # if __name__ == '__main__':
 #     print(version_reader(variable_path()))
