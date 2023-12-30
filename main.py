@@ -23,7 +23,7 @@ def on_menu_click(menu_category, menu_item):
     elif menu_item_id == "Help_About":
         pass
     elif menu_item_id == "Help_Check for updates":
-        pass
+        updater.update_controller(main)
 
 # Create the menu window
 main = tk.Tk()
