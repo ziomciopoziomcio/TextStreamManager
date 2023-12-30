@@ -68,7 +68,7 @@ def update_controller(name):
     downloaded_version = version_download()
     if downloaded_version == -1:
         error(name)
-    elif downloaded_version == running_version:
+    elif downloaded_version == RUNNING_VERSION:
         uptodate(name, RUNNING_VERSION)
     else:
         new_version(name, RUNNING_VERSION, downloaded_version)
