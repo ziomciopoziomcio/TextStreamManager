@@ -7,7 +7,7 @@ import webbrowser
 # Value "name" in all tkinter functions
 # navigate to the name of master window
 
-running_version = "genesis-1.0.0"
+RUNNING_VERSION = "genesis-1.0.0"
 
 
 def update_link():
@@ -69,9 +69,9 @@ def update_controller(name):
     if downloaded_version == -1:
         error(name)
     elif downloaded_version == running_version:
-        uptodate(name, running_version)
+        uptodate(name, RUNNING_VERSION)
     else:
-        new_version(name, running_version, downloaded_version)
+        new_version(name, RUNNING_VERSION, downloaded_version)
 
 
 # Test function
