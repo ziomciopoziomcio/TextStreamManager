@@ -24,7 +24,7 @@ def version_reader(path):
     else:
         raise KeyError(1)
 
-def lines_amount(path):
+def lines_amount_reader(path):
     with open(path, "r") as json_file:
         data = json.load(json_file)
     if "lines_amount" in data:
