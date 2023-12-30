@@ -24,7 +24,15 @@ def version_reader(path):
     else:
         raise KeyError(1)
 
+def lines_amount(path):
+    with open(path, "r") as json_file:
+        data = json.load(json_file)
+    if "lines_amount" in data:
+        return data["lines_amount"]
+    else:
+        raise KeyError(1)
+
 # Function to read amount of text lines from
 # Test function
 # if __name__ == '__main__':
-#     print(version_reader(variable_path()))
+#     print(lines_amount(variable_path()))
