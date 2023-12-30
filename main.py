@@ -27,7 +27,7 @@ def on_menu_click(menu_category, menu_item):
         updater.update_controller(main)
 
 # Check is config file exist
-config_path =
+# config_path = IN_BUILD
 
 # Create the menu window
 main = tk.Tk()
