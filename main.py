@@ -4,6 +4,26 @@ from components import updater
 # Function to handle menu item clicks
 def on_menu_click(menu_category, menu_item):
     menu_item_id = menu_item_data.get((menu_category, menu_item), "Unknown ID")
+    if menu_item_id == "Text_New":
+        pass
+    elif menu_item_id == "Text_Edit":
+        pass
+    elif menu_item_id == "Text_Save":
+        pass
+    elif menu_item_id == "Text_Delete":
+        pass
+    elif menu_item_id == "Templates_Save":
+        pass
+    elif menu_item_id == "Templates_Save to file":
+        pass
+    elif menu_item_id == "Templates_Load from file":
+        pass
+    elif menu_item_id == "Templates_Load from database":
+        pass
+    elif menu_item_id == "Help_About":
+        pass
+    elif menu_item_id == "Help_Check for updates":
+        pass
 
 # Create the menu window
 main = tk.Tk()
