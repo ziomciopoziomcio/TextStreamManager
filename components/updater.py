@@ -52,7 +52,8 @@ def uptodate(name, current):
 def error(name):
     updater = tk.Toplevel(name)
     updater.title("Error")
-    label = tk.Label(updater, text="We cannot download the latest version.\nCheck your internet connection")
+    text = "We cannot download the latest version.\nCheck your internet connection"
+    label = tk.Label(updater, text=text)
     label.pack(pady=10)
     link = ttk.Label(updater, text="You can also try to see releases\nJust click here", cursor="hand2", foreground="blue")
     link.pack(pady=2)
