@@ -2,6 +2,7 @@
 import json
 import os
 
+
 # Function to trace file with variables
 def variable_path():
     try:
@@ -25,6 +26,7 @@ def version_reader(path):
     else:
         raise KeyError(1)
 
+
 def lines_amount_reader(path):
     with open(path, "r") as json_file:
         data = json.load(json_file)
@@ -32,6 +34,7 @@ def lines_amount_reader(path):
         return data["lines_amount"]
     else:
         raise KeyError(1)
+
 
 # Function to read amount of text lines from
 # Test function
