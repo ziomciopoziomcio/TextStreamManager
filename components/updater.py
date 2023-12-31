@@ -1,3 +1,4 @@
+# This is a part of programme for checking the updates of the programme
 import tkinter as tk
 from tkinter import ttk
 import requests

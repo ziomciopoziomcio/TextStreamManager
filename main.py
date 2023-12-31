@@ -31,6 +31,7 @@ def on_menu_click(menu_category, menu_item):
 # Check is config file exist
 config_path = data_reader.variable_path()
 
+
 # Create the menu window
 main = tk.Tk()
 main.title("TextStreamManager")
