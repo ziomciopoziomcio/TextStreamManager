@@ -1,23 +1,24 @@
 import tkinter as tk
 from tkinter import ttk
+import os
 import webbrowser
 import requests
 
-def no_config_file():
-    try:
-        # Make a GET request to the URL
-        response = requests.get(url)
-        response.raise_for_status()  # Raise an exception for bad responses
+def track_program_path():
+    path = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.join(path, '../assets/data.json')
+    return path
 
-        # Ensure the save directory exists
+def no_config_file():
+    url = "https://raw.githubusercontent.com/ziomciopoziomcio/TextStreamManager/main/assets/variables.json"
+    save_path = track_program_path()
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
         save_directory = os.path.dirname(save_path)
         os.makedirs(save_directory, exist_ok=True)
-
-        # Save the content to a local file
         with open(save_path, 'wb') as json_file:
             json_file.write(response.content)
-
-        print(f"File downloaded and saved to {save_path}")
         return 0
     except:
         return 1
