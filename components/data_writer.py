@@ -1,3 +1,4 @@
+# This is a part of the programme for writing data to files
 import json
 
 # Function to write version from data file

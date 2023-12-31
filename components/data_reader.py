@@ -1,3 +1,4 @@
+# This is a part of the programme for reading files' data
 import json
 import os
 
