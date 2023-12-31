@@ -5,7 +5,7 @@ This is a comprehensive broadcasting resource that seamlessly integrates static 
 |[ziomciopoziomcio](https://github.com/ziomciopoziomcio)|Initiator, Programmist, Head of the Project|
 |[nina](https://github.com/ninsson)|Programmist|
 |[Marc311o](https://github.com/Marc311o)|Programmist|
-|[patek-ketap](https://github.com/patek-ketap)|Project Manager, Communications Manager|
+|[patek-ketap](https://github.com/patek-ketap)|Project Manager, Code Inspector|
 
 ## version
 We're currently working on Genesis 1.0.0

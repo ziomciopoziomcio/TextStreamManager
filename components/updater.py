@@ -1,13 +1,13 @@
-import requests
 import tkinter as tk
 from tkinter import ttk
+import requests
 import webbrowser
 
 # ANNOTATION:
 # Value "name" in all tkinter functions
 # navigate to the name of master window
 
-running_version = "genesis-1.0.0"
+RUNNING_VERSION = "genesis-1.0.0"
 
 
 def update_link():
@@ -31,7 +31,8 @@ def version_download():
 def new_version(name, current, new):
     updater = tk.Toplevel(name)
     updater.title("New version available")
-    label = tk.Label(updater, text=f"You are currently running old version:\n{current}\nThe latest version:\n{new}")
+    text = f"You are currently running old version:\n{current}\nThe latest version:\n{new}"
+    label = tk.Label(updater, text=text)
     label.pack(pady=2)
     link = ttk.Label(updater, text="Click here to see releases", cursor="hand2", foreground="blue")
     link.pack(pady=2)
@@ -52,9 +53,11 @@ def uptodate(name, current):
 def error(name):
     updater = tk.Toplevel(name)
     updater.title("Error")
-    label = tk.Label(updater, text="We cannot download the latest version.\nCheck your internet connection")
+    text = "We cannot download the latest version.\nCheck your internet connection"
+    label = tk.Label(updater, text=text)
     label.pack(pady=10)
-    link = ttk.Label(updater, text="You can also try to see releases\nJust click here", cursor="hand2", foreground="blue")
+    text = "You can also try to see releases\nJust click here"
+    link = ttk.Label(updater, text=text, cursor="hand2", foreground="blue")
     link.pack(pady=2)
     link.bind("<Button-1>", lambda e: update_link())
     updater.mainloop()
@@ -65,10 +68,10 @@ def update_controller(name):
     downloaded_version = version_download()
     if downloaded_version == -1:
         error(name)
-    elif downloaded_version == running_version:
-        uptodate(name, running_version)
+    elif downloaded_version == RUNNING_VERSION:
+        uptodate(name, RUNNING_VERSION)
     else:
-        new_version(name, running_version, downloaded_version)
+        new_version(name, RUNNING_VERSION, downloaded_version)
 
 
 # Test function
