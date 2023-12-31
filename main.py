@@ -4,6 +4,7 @@ import tkinter as tk
 from components import updater, about, data_reader
 import json
 
+
 # Function to handle menu item clicks
 def on_menu_click(menu_category, menu_item):
     menu_item_id = menu_item_data.get((menu_category, menu_item), "Unknown ID")
@@ -27,6 +28,7 @@ def on_menu_click(menu_category, menu_item):
         about.about(main)
     elif menu_item_id == "Help_Check for updates":
         updater.update_controller(main)
+
 
 # Check is config file exist
 config_path = data_reader.variable_path()

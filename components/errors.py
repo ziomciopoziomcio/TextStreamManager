@@ -4,10 +4,12 @@ import os
 import webbrowser
 import requests
 
+
 def track_program_path():
     path = os.path.dirname(os.path.abspath(__file__))
     path = os.path.join(path, '../assets/data.json')
     return path
+
 
 def no_config_file():
     url = "https://raw.githubusercontent.com/ziomciopoziomcio/TextStreamManager/main/assets/variables.json"

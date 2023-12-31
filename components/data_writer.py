@@ -1,6 +1,7 @@
 # This is a part of the programme for writing data to files
 import json
 
+
 # Function to write version from data file
 def version_writer(path, to_save):
     try:
@@ -11,8 +12,9 @@ def version_writer(path, to_save):
             json.dump(data, json_file, indent=2)
         return 0
 
-    except :
+    except:
         return 1
+
 
 def lines_amount_writer(path, to_save):
     try:
