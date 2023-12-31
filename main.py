@@ -1,5 +1,7 @@
+# this is the main file of the programme
+
 import tkinter as tk
-from components import updater, about
+from components import updater, about, data_reader
 import json
 
 # Function to handle menu item clicks
@@ -27,7 +29,7 @@ def on_menu_click(menu_category, menu_item):
         updater.update_controller(main)
 
 # Check is config file exist
-config_path =
+config_path = data_reader.variable_path()
 
 # Create the menu window
 main = tk.Tk()
