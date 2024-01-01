@@ -1,11 +1,11 @@
+# This is a part of the programme for information about the programme
 import tkinter as tk
 from tkinter import ttk
 import webbrowser
-
-
 # ANNOTATION:
 # Value "name" in all tkinter functions
 # navigate to the name of master window
+
 
 # Link to GitHub project
 def about_link():

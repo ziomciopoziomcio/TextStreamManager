@@ -1,3 +1,4 @@
+# This is a part of the programme for handling errors
 import tkinter as tk
 from tkinter import ttk
 import os
