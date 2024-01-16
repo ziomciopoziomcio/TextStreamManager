@@ -1,7 +1,7 @@
 # this is the main file of the programme
 
 import tkinter as tk
-from components import updater, about, data_reader
+from components import updater, about, data_reader, errors
 import json
 
 
@@ -32,6 +32,13 @@ def on_menu_click(menu_category, menu_item):
 
 # Check is config file exist
 config_path = data_reader.variable_path()
+if config_path == 1:
+    status = errors.no_config_file()
+    if status == 0:
+        config_path = data_reader.variable_path()
+    else:
+        errors.cannot_start()
+
 
 
 # Create the menu window
